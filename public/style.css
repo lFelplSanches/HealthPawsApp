@@ -1,4 +1,3 @@
-
 body {
     background-color: #fdeae3; /* Cor de fundo da página */
     font-family: Arial, sans-serif;
@@ -119,4 +118,89 @@ table th {
     background-color: #92edeb; /* Cor do cabeçalho da tabela */
     color: #333;
     font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #92edeb, #fdeae3);
+    text-align: center;
+    padding: 50px 20px;
+    color: #333;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.hero-content button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Info Section */
+.info-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-section p,
+.info-section ul {
+    font-size: 18px;
+    color: #555;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-section ul li {
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Estilo do ícone de carrinho de compras */
+td a i {
+    font-size: 20px;
+    color: #007BFF;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+td a:hover i {
+    color: #0056b3;
+    transform: scale(1.2);
 }

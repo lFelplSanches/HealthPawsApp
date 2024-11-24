@@ -1,21 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bem-vindo ao HealthPaws - Otimização para Pets</title>
-  <link rel="stylesheet" href="welcome.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthPaws - Bem-vindo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="welcome-container">
-    <h1 class="welcome-title">Bem-Vindo ao HealthPaws</h1>
-    <p class="welcome-message">Otimize a alimentação do seu pet com nosso sistema personalizado!</p>
-    <button id="startButton" class="welcome-button" tabindex="0">Começar</button>
-  </div>
-  <script>
-    document.getElementById('startButton').addEventListener('click', function() {
-      window.location.href = 'pets.html';
-    });
-  </script>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Bem-vindo ao HealthPaws</h1>
+            <p>Cuidando do seu pet com dedicação e carinho.</p>
+            <button onclick="window.location.href='pets.html'">Explore nossos serviços</button>
+        </div>
+    </header>
+
+    <main class="info-section">
+        <section class="mission">
+            <h2>Nossa Missão</h2>
+            <p>Ajudar você a cuidar melhor do seu pet com ferramentas inteligentes e suporte dedicado.</p>
+        </section>
+        <section class="features">
+            <h2>O que oferecemos</h2>
+            <ul>
+                <li>🔎 Cálculo nutricional para cães e gatos</li>
+                <li>📊 Relatórios claros e precisos</li>
+                <li>🛒 Links diretos para compra de rações</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 HealthPaws. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>

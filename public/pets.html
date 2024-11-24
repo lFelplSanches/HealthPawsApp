@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro do Pet - HealthPaws</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="gradient-background">
     <div class="sidebar">
         <h2>Health Paws</h2>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Bem-vindo</a></li>
             <li><a href="pets.html" class="active">Cadastro de Pet</a></li>
             <li><a href="about.html">Sobre</a></li>
             <li><a href="https://fofuradepelo.lojavirtualnuvem.com.br/">Loja</a></li>
         </ul>
     </div>
-    <div class="main-content animated-content">
-        <h1 class="animated-title">Cadastro do Pet</h1>
-        <form id="form-pet" class="animated-form">
+    <div class="main-content">
+        <h1>Cadastro do Pet</h1>
+        <form id="form-pet">
             <div class="form-group">
                 <label for="tipo-pet">Tipo do Pet:</label>
                 <select id="tipo-pet">
@@ -51,9 +52,9 @@
                     <option value="20">20 kg</option>
                 </select>
             </div>
-            <button type="button" id="calcular" class="animated-button">Calcular</button>
+            <button type="button" id="calcular">Calcular</button>
         </form>
-        <div id="results" class="animated-results" style="display: none;">
+        <div id="results" style="display: none;">
             <h2>Resultados</h2>
             <table>
                 <thead>

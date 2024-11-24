@@ -50,8 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Função para carregar os dados das rações
 async function carregarRacoesPorTipo(tipoPet, pesoPacote) {
+    const baseUrl = window.location.origin; // Detecta a URL base automaticamente
     try {
-        const response = await fetch('http://localhost:3000/filter-racoes', {
+        const response = await fetch(`${baseUrl}/filter-racoes`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ tipoPet, pesoPacote })
@@ -82,7 +83,7 @@ function calcularConsumoDiario(peso, atividade, idade) {
     return consumoDiarioKcal;
 }
 
-// Função para calcular os produtos
+// Função para calcular os produtos e exibi-los na tabela
 function calcularProdutos(consumoDiarioKcal, racoesFiltradas, pesoPacoteSelecionado) {
     const tableBody = document.getElementById("tableBody");
     if (!tableBody) {
@@ -108,7 +109,7 @@ function calcularProdutos(consumoDiarioKcal, racoesFiltradas, pesoPacoteSelecion
             <td>${consumoDiarioGramas.toFixed(2)} g</td>
             <td>R$ ${custoDiario.toFixed(2)}</td>
             <td>${Math.floor(duracaoPacote)} dias</td>
-            <td>${racao.link ? `<a href="${racao.link}" target="_blank">Comprar</a>` : "Não disponível"}</td>
+            <td>${racao.compra ? `<a href="${racao.compra}" target="_blank" title="Comprar"><i class="fas fa-shopping-cart"></i></a>` : "Não disponível"}</td>
           </tr>
         `;
 

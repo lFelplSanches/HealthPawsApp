@@ -2,13 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
 const csv = require('csv-parser');
+const path = require('path');
 
 const app = express();
 
 // Middleware para interpretar JSON
 app.use(express.json());
 
-// CORS configuration with preflight support
+// Configuração de CORS
 const corsOptions = {
   origin: '*',
   methods: ['GET', 'POST', 'OPTIONS'],
@@ -17,13 +18,20 @@ const corsOptions = {
   preflightContinue: true,
   optionsSuccessStatus: 204
 };
-
 app.use(cors(corsOptions));
 
 // Middleware para adicionar o cabeçalho Access-Control-Allow-Private-Network
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Private-Network', 'true');
   next();
+});
+
+// Servir arquivos estáticos da pasta "public"
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Rota principal para servir 'index.html'
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Endpoint para filtrar rações
