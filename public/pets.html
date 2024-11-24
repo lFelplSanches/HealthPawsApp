@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Pet - HealthPaws</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="gradient-background">
+    <div class="sidebar">
+        <h2>Health Paws</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pets.html" class="active">Cadastro de Pet</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="https://fofuradepelo.lojavirtualnuvem.com.br/">Loja</a></li>
+        </ul>
+    </div>
+    <div class="main-content animated-content">
+        <h1 class="animated-title">Cadastro do Pet</h1>
+        <form id="form-pet" class="animated-form">
+            <div class="form-group">
+                <label for="tipo-pet">Tipo do Pet:</label>
+                <select id="tipo-pet">
+                    <option value="cao">Cão</option>
+                    <option value="gato">Gato</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" placeholder="Digite o peso">
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade (anos):</label>
+                <input type="number" id="idade" placeholder="Digite a idade">
+            </div>
+            <div class="form-group">
+                <label for="atividade">Atividade:</label>
+                <select id="atividade">
+                    <option value="1.2">Baixa</option>
+                    <option value="1.5">Moderada</option>
+                    <option value="1.8">Alta</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="peso-pacote">Peso do Pacote (kg):</label>
+                <select id="peso-pacote">
+                    <option value="5">5 kg</option>
+                    <option value="10">10 kg</option>
+                    <option value="15">15 kg</option>
+                    <option value="20">20 kg</option>
+                </select>
+            </div>
+            <button type="button" id="calcular" class="animated-button">Calcular</button>
+        </form>
+        <div id="results" class="animated-results" style="display: none;">
+            <h2>Resultados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ração</th>
+                        <th>Preço Total (R$)</th>
+                        <th>Consumo Diário (g)</th>
+                        <th>Custo Diário (R$)</th>
+                        <th>Duração (dias)</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
